@@ -68,7 +68,9 @@ namespace KitchenTimer {
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.Black;
 
-                        if (key == "2") {
+                        if(key == "1") {
+                            count++;
+                        }else if (key == "2") {
                             state = State.Keisoku;
                             tTimer.Start();
                         } else if (key == "3") {
@@ -188,7 +190,7 @@ namespace KitchenTimer {
 
                     WriteTimer();
 
-                    Console.WriteLine("\n入力可能キー: 2 => タイマースタート, 3 => リセット");
+                    Console.WriteLine("\n入力可能キー: 1 => +1, 2 => タイマースタート, 3 => リセット");
 
                     break;
 
